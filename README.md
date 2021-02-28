@@ -37,8 +37,16 @@ $ roslaunch consensus consensus.launch
 4. Finally, they simultaneously move towards the previously located centroid.
 5. Meanwhile, various types of information are printed on the terminal. Wait until the consensus node is shut down. Yet feel free to press `ESC` to exit the program anytime.
 
+## Some _turtlish_ screenshots
+
+* Initial positions:
+
 ![](img/c1.png)
 
+* Turtles are movin' toward the centroid(s):
+
 ![](img/c2.png)
+
+* Centroid pose(s) finally reached:
 
 ![](img/c3.png)
