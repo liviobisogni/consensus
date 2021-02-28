@@ -1,0 +1,135 @@
+#******************************************************************************
+#**********        .CLANG-FORMAT - Clang Format Style Options        **********
+#********** https://clang.llvm.org/docs/ClangFormatStyleOptions.html **********
+#**********                   Author: Livio Bisogni                  **********
+#**********               © 2021 Turtley & Turtles Ltd.              **********
+#******************************************************************************
+
+# The style used for all options not specifically set in the configuration.
+BasedOnStyle: LLVM
+
+# The way to use tab characters in the resulting file.
+# 'Never': Never use tab
+UseTab: Never
+
+# The number of columns to use for indentation.
+IndentWidth: 4
+
+# The number of columns used for tab stops.
+TabWidth: 4
+
+# The column limit.
+# A column limit of 0 means that there is no column limit.
+# In this case, clang-format will respect the input’s line breaking decisions
+# within statements unless they contradict other rules.
+ColumnLimit: 80
+
+# If true, the empty line at the start of blocks is kept.
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# The maximum number of consecutive empty lines to keep.
+MaxEmptyLinesToKeep: 2
+
+# Align parameters on the open bracket
+AlignAfterOpenBracket: Align
+
+# If true, aligns consecutive assignments
+AlignConsecutiveAssignments: true
+
+# If true, aligns consecutive declarations.
+AlignConsecutiveDeclarations: true
+
+# If true, aligns consecutive C/C++ preprocessor macros.
+AlignConsecutiveMacros: true
+
+# Never put short ifs on the same line
+AllowShortIfStatementsOnASingleLine: Never
+
+# If false, a function call’s arguments will either be all on the same line or
+# will have one line each.
+BinPackArguments: true
+
+# If false, a function declaration’s or function definition’s parameters will
+# either all be on the same line or will have one line each.
+BinPackParameters: true
+
+# If BreakBeforeBraces is set to Custom, it is possible to specify (within
+# "BraceWrapping") how each individual brace case should be handled.
+# Otherwise, this is ignored.
+BreakBeforeBraces: Custom
+# Control of individual brace wrapping cases.
+BraceWrapping:
+  AfterEnum: true
+  AfterStruct: true
+  SplitEmptyFunction: true
+  AfterControlStatement: false
+  AfterNamespace: false
+  AfterFunction: true
+  AfterUnion: true
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+# Indent width for line continuations.
+ContinuationIndentWidth: 4
+
+# If true, format braced lists as best suited for C++11 braced lists.
+# Important differences:
+# - No spaces inside the braced list.
+# - No line break before the closing brace.
+# - Indentation with the continuation indent, not with the block indent.
+Cpp11BracedListStyle: true
+
+# If true, clang-format will sort #includes.
+SortIncludes: false
+
+# Merge multiple #include blocks together and sort as one.
+#IncludeBlocks: Merge
+
+# Indent case labels one level from the switch statement.
+#IndentCaseLabels: true
+
+# The preprocessor directive indenting style to use.
+# Possible values:
+#     'None':       Does not indent any directives;
+#     'AfterHash':  Indents directives after the hash;
+#     'BeforeHash': Indents directives before the hash.
+IndentPPDirectives: None
+
+# Language, this format style is targeted at.
+Language: Cpp
+
+# If true, a space is inserted after C style casts.
+SpaceAfterCStyleCast: false
+
+# Put a space before opening parentheses only after
+# control statement keywords (for/if/while...).
+SpaceBeforeParens: ControlStatements
+
+#The number of spaces before trailing line comments (// - comments).
+# This does not affect trailing block comments (/* - comments)
+# as those commonly have different usage patterns and a number of special cases.
+SpacesBeforeTrailingComments: 2
+
+# If true, spaces may be inserted into C style casts.
+#SpacesInCStyleCastParentheses: true
+
+# If true, aligns trailing comments.
+AlignTrailingComments: true
+
+# If true, clang-format will sort #includes.
+SortIncludes: false
+
+# If true, spaces will be inserted after ( and before ).
+SpacesInParentheses: false
+
+# If true, spaces will be inserted after [ and before ].
+# Lambdas without arguments or unspecified size array declarations
+# will not be affected.
+SpacesInSquareBrackets: false
+
+# If true, spaces will be inserted before [.
+# Lambdas will not be affected. Only the first [ will get a space added.
+SpaceBeforeSquareBrackets: false
