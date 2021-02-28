@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+
+<!-- ***************************************************************************** -->
+<!-- ***********************        CONSENSUS.LAUNCH       *********************** -->
+<!-- ***********************     Author: Livio Bisogni     *********************** -->
+<!-- *********************** © 2021 Turtley & Turtles Ltd. *********************** -->
+<!-- ***************************************************************************** -->
+
+<launch>
+    <!-- Turtlesim Node -->
+    <node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+
+    <!-- Spawn 4 more turtles -->
+    <node pkg="rosservice" type="rosservice" name="create_turtle2" args='call &#45;-wait /spawn "{x: 1, y: 1.5, theta: 1.7, name: turtle2}" '/>
+    <node pkg="rosservice" type="rosservice" name="create_turtle3" args='call &#45;-wait /spawn "{x: 10.0, y: 1.0, theta: -1.8, name: turtle3}" '/>
+    <node pkg="rosservice" type="rosservice" name="create_turtle4" args='call &#45;-wait /spawn "{x: 7.2, y: 8.3, theta: 1.6, name: turtle4}" '/>
+    <node pkg="rosservice" type="rosservice" name="create_turtle5" args='call &#45;-wait /spawn "{x: 10.5, y: 1.8, theta: 0.7, name: turtle5}" '/>
+    <!-- -
+        <node pkg="rosservice" type="rosservice" name="create_turtle6" args='call &#45;-wait /spawn "{x: 1, y: 2, theta: 3, name: turtle6}" '/>
+    <!- -->
+
+
+    <!-- Consensus -->
+    <node pkg="consensus" type="consensus" name="consensus" output="screen" required="true"/>
+</launch>
