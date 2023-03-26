@@ -1,8 +1,6 @@
 #******************************************************************************
 #**********        .CLANG-FORMAT - Clang Format Style Options        **********
 #********** https://clang.llvm.org/docs/ClangFormatStyleOptions.html **********
-#**********                   Author: Livio Bisogni                  **********
-#**********               © 2021 Turtley & Turtles Ltd.              **********
 #******************************************************************************
 
 # The style used for all options not specifically set in the configuration.
